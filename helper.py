@@ -11,13 +11,13 @@ def get_colors(img):
   result = False
 
   # 회색
-  if mean[0] > 50 and mean[0] < 60 and mean[1] > 50 and mean[1] < 60 and mean[2] > 50 and mean[2] < 60:
+  if mean[0] > 40 and mean[0] < 60 and mean[1] > 40 and mean[1] < 60 and mean[2] > 40 and mean[2] < 60:
     result = 'BOMB'
-  elif mean[0] > 245 and mean[1] > 85 and mean[1] < 120 and mean[2] > 240:
+  elif mean[0] > 220 and mean[1] > 70 and mean[1] < 120 and mean[2] > 220:
     result = 'SWORD'
-  elif mean[0] > 100 and mean[0] < 130 and mean[1] > 150 and mean[1] < 200 and mean[2] > 90 and mean[2] < 110:
+  elif mean[0] > 90 and mean[0] < 130 and mean[1] > 150 and mean[1] < 200 and mean[2] > 70 and mean[2] < 110:
     result = 'POISON'
-  elif mean[0] > 210 and mean[0] < 230 and mean[1] > 210 and mean[1] < 230 and mean[2] > 120 and mean[2] < 150:
+  elif mean[0] > 180 and mean[0] < 230 and mean[1] > 180 and mean[1] < 230 and mean[2] > 90 and mean[2] < 150:
     result = 'JEWEL'
 
   return result, mean
